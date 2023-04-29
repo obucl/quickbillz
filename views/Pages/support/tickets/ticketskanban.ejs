@@ -1,0 +1,3023 @@
+<div class="content container-fluid">
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="content-page-header">
+      <h5>Tickets</h5>
+      <div class="list-btn">
+        <ul class="filter-list">
+          <li>
+            <div class="short-filter">
+              <img
+                class="me-2"
+                src="assets/img/icons/sort.svg"
+                alt="Sort by select"
+              />
+              <div class="sort-by">
+                <select class="sort">
+                  <option>Sort by: Date</option>
+                  <option>Sort by: Date 1</option>
+                  <option>Sort by: Date 2</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="btn btn-filters w-auto popup-toggle"
+              ><span class="me-2"><i class="fe fe-filter"></i></span>Filter
+            </a>
+          </li>
+          <li>
+            <a class="active btn-filters" href="<%= routes.ticketskanban %>"
+              ><span><i class="fe fe-grid"></i></span>
+            </a>
+          </li>
+          <li>
+            <a class="btn-filters" href="<%= routes.ticketslist %>"
+              ><span><i class="fe fe-list"></i></span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="btn btn-primary"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#add_ticket"
+              ><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>New
+              Tickets</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /Page Header -->
+
+  <!-- Search Filter -->
+  <div id="filter_inputs" class="card filter-card">
+    <div class="card-body pb-0">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Search Filter -->
+
+  <!-- Inovices card -->
+  <div class="row">
+    <div class="col-xl-2 col-lg-4 col-sm-6 col-12">
+      <div class="card inovices-card">
+        <div class="card-body">
+          <div class="dash-widget-header mb-0">
+            <span class="inovices-widget-icon rounded-circle bg-info-light">
+              <img src="assets/img/icons/receipt-item.svg" alt="" />
+            </span>
+            <div class="dash-count">
+              <div class="dash-title">Total Tickets</div>
+              <div class="dash-counts">
+                <p class="mb-0">$298</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-sm-6 col-12">
+      <div class="card inovices-card">
+        <div class="card-body">
+          <div class="dash-widget-header mb-0">
+            <span class="inovices-widget-icon rounded-circle bg-primary-light">
+              <img src="assets/img/icons/transaction-minus.svg" alt="" />
+            </span>
+            <div class="dash-count">
+              <div class="dash-title">Completed</div>
+              <div class="dash-counts">
+                <p class="mb-0">$325,215</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-sm-6 col-12">
+      <div class="card inovices-card">
+        <div class="card-body">
+          <div class="dash-widget-header mb-0">
+            <span class="inovices-widget-icon rounded-circle bg-warning-light">
+              <img src="assets/img/icons/archive-book.svg" alt="" />
+            </span>
+            <div class="dash-count">
+              <div class="dash-title">In Progress</div>
+              <div class="dash-counts">
+                <p class="mb-0">$7825</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-sm-6 col-12">
+      <div class="card inovices-card">
+        <div class="card-body">
+          <div class="dash-widget-header mb-0">
+            <span class="inovices-widget-icon rounded-circle bg-primary-light">
+              <img src="assets/img/icons/clipboard-close.svg" alt="" />
+            </span>
+            <div class="dash-count">
+              <div class="dash-title">Unassigned</div>
+              <div class="dash-counts">
+                <p class="mb-0">100</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-sm-6 col-12">
+      <div class="card inovices-card">
+        <div class="card-body">
+          <div class="dash-widget-header mb-0">
+            <span class="inovices-widget-icon rounded-circle bg-green-light">
+              <img src="assets/img/icons/message-edit.svg" alt="" />
+            </span>
+            <div class="dash-count">
+              <div class="dash-title">New</div>
+              <div class="dash-counts">
+                <p class="mb-0">$125,586</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-sm-6 col-12">
+      <div class="card inovices-card">
+        <div class="card-body">
+          <div class="dash-widget-header mb-0">
+            <span class="inovices-widget-icon rounded-circle bg-danger-light">
+              <img src="assets/img/icons/3d-rotate.svg" alt="" />
+            </span>
+            <div class="dash-count">
+              <div class="dash-title">Hold Tickets</div>
+              <div class="dash-counts">
+                <p class="mb-0">$86,892</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Inovices card -->
+
+  <!-- All Invoice -->
+  <div class="card invoices-tabs-card">
+    <div class="invoices-main-tabs">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <div class="invoices-tabs">
+            <ul>
+              <li>
+                <a href="<%= routes.ticketskanban %>" class="active">All</a>
+              </li>
+              <li><a href="<%= routes.ticketlistpending %>">Pending</a></li>
+              <li><a href="<%= routes.ticketlistoverdue %>">Overdue</a></li>
+              <li><a href="<%= routes.ticketlistdraft %>">Draft</a></li>
+              <li><a href="<%= routes.ticketlistrecurring %>">Recurring</a></li>
+              <li><a href="<%= routes.ticketlistcancelled %>">Cancelled</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /All Invoice -->
+
+  <!-- Ticket Kanban -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="kanban-ticket-main">
+        <!-- list grid title -->
+        <ul class="kanban-ticket-list css-equal-heights">
+          <li class="kanban-ticket-grid">
+            <div
+              class="kanban-ticket d-flex justify-content-between align-items-center"
+            >
+              <div class="kanban-head css-equal-heights">
+                <h6 class="me-2">Open</h6>
+                <span
+                  class="inovices-widget-icon rounded-circle bg-warning-light text-warning-light"
+                  >5</span
+                >
+              </div>
+              <a href="#"
+                ><span><i class="fe fe-plus"></i></span
+              ></a>
+            </div>
+          </li>
+          <li class="kanban-ticket-grid">
+            <div
+              class="kanban-ticket d-flex justify-content-between align-items-center"
+            >
+              <div class="kanban-head css-equal-heights">
+                <h6 class="me-2">In Progress</h6>
+                <span
+                  class="inovices-widget-icon rounded-circle bg-warning-light text-warning-light"
+                  >8</span
+                >
+              </div>
+              <a href="#"
+                ><span><i class="fe fe-plus"></i></span
+              ></a>
+            </div>
+          </li>
+          <li class="kanban-ticket-grid">
+            <div
+              class="kanban-ticket d-flex justify-content-between align-items-center"
+            >
+              <div class="kanban-head css-equal-heights">
+                <h6 class="me-2">Hold</h6>
+                <span
+                  class="inovices-widget-icon rounded-circle bg-warning-light text-warning-light"
+                  >6</span
+                >
+              </div>
+              <a href="#"
+                ><span><i class="fe fe-plus"></i></span
+              ></a>
+            </div>
+          </li>
+          <li class="kanban-ticket-grid">
+            <div
+              class="kanban-ticket d-flex justify-content-between align-items-center"
+            >
+              <div class="kanban-head css-equal-heights">
+                <h6 class="me-2">Unassigned</h6>
+                <span
+                  class="inovices-widget-icon rounded-circle bg-warning-light text-warning-light"
+                  >5</span
+                >
+              </div>
+              <a href="#"
+                ><span><i class="fe fe-plus"></i></span
+              ></a>
+            </div>
+          </li>
+          <li class="kanban-ticket-grid">
+            <div
+              class="kanban-ticket d-flex justify-content-between align-items-center"
+            >
+              <div class="kanban-head css-equal-heights">
+                <h6 class="me-2">Solved</h6>
+                <span
+                  class="inovices-widget-icon rounded-circle bg-warning-light text-warning-light"
+                  >10</span
+                >
+              </div>
+              <a href="#"
+                ><span><i class="fe fe-plus"></i></span
+              ></a>
+            </div>
+          </li>
+        </ul>
+        <!-- list grid title -->
+
+        <ul class="kanban-ticket-list css-equal-heights">
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-warning-light text-warning-light"
+                    >Medium</span
+                  >
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Support for theme</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge badge bg-success-light">Paid</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Verify your email</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-danger-light">High</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Management</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-primary-light">Overdue</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Support for theme</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge badge bg-success-light">Paid</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-danger-light">High</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Management</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Verify your email</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-warning-light text-warning-light"
+                    >Medium</span
+                  >
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Support for theme</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge badge bg-success-light">Paid</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-danger-light">High</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Management</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-primary-light">Overdue</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Support for theme</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge badge bg-success-light">Paid</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-danger-light">High</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Management</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Verify your email</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-danger-light">High</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Management</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-primary-light">Overdue</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Support for theme</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge badge bg-success-light">Paid</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-danger-light">High</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Management</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Verify your email</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-warning-light text-warning-light"
+                    >Medium</span
+                  >
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Support for theme</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge badge bg-success-light">Paid</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Verify your email</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-warning-light text-warning-light"
+                    >Medium</span
+                  >
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Support for theme</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge badge bg-success-light">Paid</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-danger-light">High</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Management</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge bg-danger-light">Cancelled</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+
+          <!-- list Grid -->
+          <li class="kanban-ticket-grid">
+            <div class="card-kanban">
+              <div class="kanban-box">
+                <div
+                  class="kanban-name d-flex justify-content-between align-items-center"
+                >
+                  <span class="badge bg-primary-light">Low</span>
+                  <div class="dropdown dropdown-action">
+                    <a
+                      href="#"
+                      class="action-icon dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><i class="fas fa-ellipsis-h"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-edit me-2"></i>Edit</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-eye me-2"></i>View</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0);"
+                        ><i class="far fa-trash-alt me-2"></i>Delete</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <h6>Support for theme</h6>
+                <div class="ticket-due d-flex">
+                  <div class="ticket-due-id me-2">
+                    <span class="badge badge-gray-outline">#4987</span>
+                  </div>
+                  <div class="ticket-due-status">
+                    <span class="badge badge bg-success-light">Paid</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <ul class="kanban-ticket-img d-flex align-items-center">
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 1"
+                      >
+                        <img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-01.jpg"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 3"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-02.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 4"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-04.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=""
+                        data-bs-original-title="Member 5"
+                        ><img
+                          class="avatar-img rounded-circle"
+                          src="assets/img/profiles/avatar-05.jpg"
+                          alt="img"
+                      /></a>
+                    </li>
+                    <li class="more-set">
+                      <a href="#"
+                        ><span
+                          class="d-flex justify-content-center align-items-center"
+                          ><i class="fe fe-plus"></i></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <div class="progressset">
+                    <p>
+                      <span><i class="far fa-calendar me-2"></i></span> Jan 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /list Grid -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /Ticket Kanban -->
+</div>
+
+<!-- Add Asset -->
+<div class="toggle-sidebar">
+  <div class="sidebar-layout-filter">
+    <div class="sidebar-header">
+      <h5>Filter</h5>
+      <a href="#" class="sidebar-closes"
+        ><i class="fa-regular fa-circle-xmark"></i
+      ></a>
+    </div>
+    <div class="sidebar-body">
+      <form action="#" autocomplete="off">
+        <!-- Customer -->
+        <div class="accordion" id="accordionMain1">
+          <div class="card-header-new" id="headingOne">
+            <h6 class="filter-title">
+              <a
+                href="javascript:void(0);"
+                class="w-100"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Customer
+                <span class="float-end"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </a>
+            </h6>
+          </div>
+
+          <div
+            id="collapseOne"
+            class="collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample1"
+          >
+            <div class="card-body-chat">
+              <div class="row">
+                <div class="col-md-12">
+                  <div id="checkBoxes1">
+                    <div class="form-custom">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="member_search1"
+                        placeholder="Search here"
+                      />
+                      <span
+                        ><img src="assets/img/icons/search.svg" alt="img"
+                      /></span>
+                    </div>
+                    <div class="selectBox-cont">
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username" />
+                        <span class="checkmark"></span> Brian Johnson
+                      </label>
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username" />
+                        <span class="checkmark"></span> Russell Copeland
+                      </label>
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username" />
+                        <span class="checkmark"></span> Greg Lynch
+                      </label>
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username" />
+                        <span class="checkmark"></span> John Blair
+                      </label>
+                      <!-- View All -->
+                      <div class="view-content">
+                        <div class="viewall-One">
+                          <label class="custom_check w-100">
+                            <input type="checkbox" name="username" />
+                            <span class="checkmark"></span> Barbara Moore
+                          </label>
+                          <label class="custom_check w-100">
+                            <input type="checkbox" name="username" />
+                            <span class="checkmark"></span> Hendry Evan
+                          </label>
+                          <label class="custom_check w-100">
+                            <input type="checkbox" name="username" />
+                            <span class="checkmark"></span> Richard Miles
+                          </label>
+                        </div>
+                        <div class="view-all">
+                          <a
+                            href="javascript:void(0);"
+                            class="viewall-button-One"
+                            ><span class="me-2">View All</span
+                            ><span
+                              ><i class="fa fa-circle-chevron-down"></i></span
+                          ></a>
+                        </div>
+                      </div>
+                      <!-- /View All -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Customer -->
+
+        <!-- Select Date -->
+        <div class="accordion" id="accordionMain2">
+          <div class="card-header-new" id="headingTwo">
+            <h6 class="filter-title">
+              <a
+                href="javascript:void(0);"
+                class="w-100 collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="true"
+                aria-controls="collapseTwo"
+              >
+                Select Date
+                <span class="float-end"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </a>
+            </h6>
+          </div>
+
+          <div
+            id="collapseTwo"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample2"
+          >
+            <div class="card-body-chat">
+              <div class="form-group">
+                <label class="form-control-label">From</label>
+                <div class="cal-icon">
+                  <input
+                    type="email"
+                    class="form-control datetimepicker"
+                    placeholder="DD-MM-YYYY"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-control-label">To</label>
+                <div class="cal-icon">
+                  <input
+                    type="email"
+                    class="form-control datetimepicker"
+                    placeholder="DD-MM-YYYY"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Select Date -->
+
+        <!-- By Status -->
+        <div class="accordion" id="accordionMain3">
+          <div class="card-header-new" id="headingThree">
+            <h6 class="filter-title">
+              <a
+                href="javascript:void(0);"
+                class="w-100 collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="true"
+                aria-controls="collapseThree"
+              >
+                By Status
+                <span class="float-end"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </a>
+            </h6>
+          </div>
+
+          <div
+            id="collapseThree"
+            class="collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample3"
+          >
+            <div class="card-body-chat">
+              <div id="checkBoxes2">
+                <div class="form-custom">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="member_search2"
+                    placeholder="Search here"
+                  />
+                  <span
+                    ><img src="assets/img/icons/search.svg" alt="img"
+                  /></span>
+                </div>
+                <div class="selectBox-cont">
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="bystatus" />
+                    <span class="checkmark"></span> All Invoices
+                  </label>
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="bystatus" />
+                    <span class="checkmark"></span> Paid
+                  </label>
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="bystatus" />
+                    <span class="checkmark"></span> Overdue
+                  </label>
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="bystatus" />
+                    <span class="checkmark"></span> Draft
+                  </label>
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="bystatus" />
+                    <span class="checkmark"></span> Recurring
+                  </label>
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="bystatus" />
+                    <span class="checkmark"></span> Cancelled
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /By Status -->
+
+        <!-- Category -->
+        <div class="accordion accordion-last" id="accordionMain4">
+          <div class="card-header-new" id="headingFour">
+            <h6 class="filter-title">
+              <a
+                href="javascript:void(0);"
+                class="w-100 collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="true"
+                aria-controls="collapseFour"
+              >
+                Category
+                <span class="float-end"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </a>
+            </h6>
+          </div>
+
+          <div
+            id="collapseFour"
+            class="collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample4"
+          >
+            <div class="card-body-chat">
+              <div id="checkBoxes3">
+                <div class="selectBox-cont">
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="category" />
+                    <span class="checkmark"></span> Advertising
+                  </label>
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="category" />
+                    <span class="checkmark"></span> Food
+                  </label>
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="category" />
+                    <span class="checkmark"></span> Repairs
+                  </label>
+                  <label class="custom_check w-100">
+                    <input type="checkbox" name="category" />
+                    <span class="checkmark"></span> Software
+                  </label>
+                  <!-- View All -->
+                  <div class="view-content">
+                    <div class="viewall-Two">
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username" />
+                        <span class="checkmark"></span> Stationary
+                      </label>
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username" />
+                        <span class="checkmark"></span> Medical
+                      </label>
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username" />
+                        <span class="checkmark"></span> Designing
+                      </label>
+                    </div>
+                    <div class="view-all">
+                      <a href="javascript:void(0);" class="viewall-button-Two"
+                        ><span class="me-2">View All</span
+                        ><span><i class="fa fa-circle-chevron-down"></i></span
+                      ></a>
+                    </div>
+                  </div>
+                  <!-- /View All -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Category -->
+
+        <button
+          type="submit"
+          class="d-inline-flex align-items-center justify-content-center btn w-100 btn-primary"
+        >
+          <span
+            ><img
+              src="assets/img/icons/chart.svg"
+              class="me-2"
+              alt="Generate report" /></span
+          >Generate report
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<!--/Add Asset -->
+
+<!-- Add Ticket Modal -->
+<div class="modal custom-modal fade" id="add_ticket" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header border-0 pb-0">
+        <div class="form-header modal-header-title text-start mb-0">
+          <h4 class="mb-0">Add Ticket</h4>
+        </div>
+        <button
+          type="button"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <span class="align-center" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="form-group">
+              <label>Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Subject"
+              />
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12">
+            <div class="form-group">
+              <label>Assigned Name</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Enter Assigned Name"
+              />
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12">
+            <div class="form-group">
+              <label>Assigned Date</label>
+              <div class="cal-icon cal-icon-info">
+                <input
+                  type="text"
+                  class="datetimepicker form-control"
+                  placeholder="Select Date"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12">
+            <div class="form-group">
+              <label>Created Date</label>
+              <div class="cal-icon cal-icon-info">
+                <input
+                  type="text"
+                  class="datetimepicker form-control"
+                  placeholder="Select Date"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12">
+            <div class="form-group">
+              <label>Due Date</label>
+              <div class="cal-icon cal-icon-info">
+                <input
+                  type="text"
+                  class="datetimepicker form-control"
+                  placeholder="Select Date"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12">
+            <div class="form-group">
+              <label>Assignee Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Assignee Name"
+              />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Priority</label>
+              <select class="select">
+                <option>Select Priority</option>
+                <option>Priority 1</option>
+                <option>Priority 2</option>
+                <option>Priority 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="form-group mb-0">
+              <label>Status</label>
+              <select class="select">
+                <option>Select Status</option>
+                <option>Status 1</option>
+                <option>Status 2</option>
+                <option>Status 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a
+          href="#"
+          data-bs-dismiss="modal"
+          class="btn btn-primary paid-cancel-btn me-2"
+          >Back</a
+        >
+        <a
+          href="#"
+          data-bs-dismiss="modal"
+          class="btn btn-primary paid-continue-btn"
+          >Save</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Add Ticket Modal -->
